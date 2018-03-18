@@ -12,7 +12,7 @@ stats.json
 *sublime*
 .DS_Store
 dist
-/public
+#/public
 manifest
 
 npm-debug.log
