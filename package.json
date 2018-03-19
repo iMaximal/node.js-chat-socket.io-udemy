@@ -28,7 +28,8 @@
     "chat"
   ],
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "socket.io": "^1.7.4"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
