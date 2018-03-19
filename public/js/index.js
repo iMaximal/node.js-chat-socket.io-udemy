@@ -3,9 +3,9 @@ var socket = io();
 socket.on('connect', function() {
   console.log('Connected to server')
 
-  socket.emit('createEmail', {
-    to: 'max@example.com',
-    text: 'Hey. This is Alena'
+  socket.emit('createMessage', {
+    from: 'Max',
+    text: 'Yup, that works fo me.'
   })
 })
 
@@ -15,4 +15,8 @@ socket.on('disconnect', function () {
 
 socket.on('newEmail', function (email) {
   console.log('New email', email)
+})
+
+socket.on('newMessage', function (message) {
+  console.log('newMessage', message)
 })
