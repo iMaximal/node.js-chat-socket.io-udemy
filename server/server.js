@@ -27,13 +27,11 @@ io.on('connection', (socket) => {
     // send to everybody
     io.emit('newMessage', generateMessage(message.from, message.text))
     callback('This is from the server')
-    // send to all, but not sender
-    // socket.broadcast.emit('newMessage', {
-    //   from: message.from,
-    //   text: message.text,
-    //   createdAt: new Date().getTime(),
-    // })
   })
+
+  socket.on('createLocationMessage', (coords) => {
+    io.emit('newMessage', generateMessage('Admin', `${coords.latitude}, ${coords.longitude}`))
+  });
 
   socket.on('disconnect', () => {
     console.log('User was disconnected')
