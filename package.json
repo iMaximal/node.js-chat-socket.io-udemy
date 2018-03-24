@@ -4,7 +4,6 @@
   "description": "Study project",
   "main": "index.js",
   "scripts": {
-    "mongo": "~/mongo/bin/mongod --dbpath ~/mongo-data",
     "start": "node server/server.js",
     "dev": "nodemon server/server.js",
     "test": "export NODE_ENV=test || SET \"NODE_ENV=test\" && mocha server/**/*.test.js",

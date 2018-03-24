@@ -19,6 +19,5 @@ npm install
 ## Usage
 
 ````bash
-npm run mongo
 npm run start
 ````
