@@ -14,7 +14,7 @@ describe('isRealString', () => {
   })
 
   it('should allow string with non-space characters', () => {
-    const res = isRealString('   Max    ')
+    const res = isRealString('  Max   ')
     expect(res).toBe(true)
   })
 })
