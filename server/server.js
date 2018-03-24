@@ -64,7 +64,6 @@ io.on('connection', (socket) => {
   })
 
   socket.on('disconnect', () => {
-    console.log('User was disconnected')
     const user = users.removeUser(socket.id)
 
     if (user) {
